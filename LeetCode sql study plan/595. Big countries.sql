@@ -3,7 +3,6 @@
 -- it has a population of at least twenty-five million (i.e., 25000000).
 -- Write an SQL query to report the name, population, and area of the big countries.
 -- Return the result table in any order.
-
 -- src https://leetcode.com/problems/big-countries/description/
 select
     name,
