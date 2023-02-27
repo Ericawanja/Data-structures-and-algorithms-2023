@@ -64,6 +64,29 @@ class LinkedList {
     previous.next = node;
     return this.head;
   }
+
+  // delete elements in a linked list
+  deleteFirstElement() {
+    return (this.head = this.head.next);
+  }
+  deleteLastElement() {
+    let current = this.head;
+    let prev;
+    while (current.next) {
+      prev = current;
+      current = current.next;
+      console.log(current);
+      console.log("______________________");
+    }
+    prev.next = null;
+    return this.head;
+  }
+  deleteElementAtPos(pos) {
+    if (pos === 0) return this.deleteFirstElement();
+    if (pos === this.size() - 1) return this.deleteLastElement();
+    if (pos < 0 || pos >= this.size()) return "invalid position";
+  }
+  
 }
 
 let node1 = new Node(2);
@@ -75,6 +98,7 @@ let list = new LinkedList(node1);
 list.insertAtEnd(9);
 
 // console.log(list.size());
-console.log(list.insertAtBeginning(1));
+list.insertAtBeginning(1);
 // console.log(list.getLastNode())
-console.log(list.insertAtPos(106, 0))
+list.insertAtPos(106, 0);
+console.log(list.deleteLastElement(), list.getLastNode());
