@@ -1,4 +1,3 @@
-
 SELECT
     a.name
 FROM
