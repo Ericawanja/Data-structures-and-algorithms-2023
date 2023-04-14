@@ -7,3 +7,6 @@ from
 where
     population > 120000
     AND countryCode = 'USA';
+
+    -- average population
+    select avg(population) from city;
